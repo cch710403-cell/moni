@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moni 語音記帳 - 支援中心</title>
+    <style>
+        :root {
+            --primary: #2D3436;
+            --accent: #00B894;
+            --bg: #F9FAFB;
+            --text: #2D3436;
+            --secondary: #636E72;
+            --card: #FFFFFF;
+            --danger: #D63031;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--card);
+            border-bottom: 1px solid #EEE;
+            padding: 2rem 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-size: 0.85rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: #EEE;
+            white-space: nowrap;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        h2 {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            color: var(--primary);
+        }
+
+        p,
+        li {
+            font-size: 0.95rem;
+            color: var(--secondary);
+        }
+
+        .highlight-box {
+            background-color: #F0FFF4;
+            border: 1px solid #C6F6D5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .danger-box {
+            background-color: #FFF5F5;
+            border: 1px solid #FED7D7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #F1F1F1;
+            padding-bottom: 1rem;
+        }
+
+        .faq-q {
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--secondary);
+            font-size: 0.8rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>MONI 語音記帳</h1>
+        <nav>
+            <a href="#privacy">隱私權</a>
+            <a href="#tos">服務條款</a>
+            <a href="#faq">常見問題</a>
+            <a href="#deletion">資料刪除</a>
+            <a href="#contact">聯絡我們</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section id="privacy">
+            <h2>隱私權政策 (Privacy Policy)</h2>
+            <p>生效日期：2026年2月7日</p>
+            <p>Moni 語音記帳重視您的隱私，本政策旨在說明我們如何處理您的資訊。</p>
+
+            <div class="highlight-box">
+                <strong>核心原則：本機優先 (Local First)</strong><br>
+                您的所有消費記錄均儲存在行動裝置本機資料庫（SQLite）。我們不會存取、收集或將您的財務明細上傳至我們的伺服器。
+            </div>
+
+            <h3>一、 資料收集與使用原則</h3>
+            <ul>
+                <li><strong>麥克風：</strong> 僅用於語音記帳辨識。語音轉換為文字後即釋放，我們不儲存影音檔。</li>
+                <li><strong>相機：</strong> 目前版本尚未啟用，僅供未來 OCR 掃描功能預備。</li>
+                <li><strong>Google API：</strong> 遵守 Google API 服務使用者數據政策，包括「有限使用要求」。</li>
+            </ul>
+
+            <h3>二、 第三方服務</h3>
+            <ul>
+                <li><strong>Google Gemini AI：</strong> 文字加密傳送至 Gemini API 解析。數據去識別化，不含個人身份資訊。</li>
+                <li><strong>Google Drive：</strong> 備份僅限於您個人的專屬應用程式空間。</li>
+                <li><strong>Google Ads：</strong> 使用廣告識別碼 (IDFA/AAID) 投放相關廣告。</li>
+            </ul>
+        </section>
+
+        <section id="tos">
+            <h2>服務條款 (Terms of Service)</h2>
+            <p>生效日期：2026年2月7日</p>
+
+            <h3>一、 免責聲明</h3>
+            <p>本程式為財務輔助工具，不構成專業財務或投資建議。AI 生成內容（如金額、類別）可能存在誤差，使用者有義務在儲存前自行核對。</p>
+
+            <h3>二、 AI 公平使用原則</h3>
+            <p>免費版每日提供 3 次 AI 解析。嚴禁以自動化腳本惡意頻繁呼叫。若偵測到異常呼叫（如每日超過 300 次），系統有權暫停功能。</p>
+
+            <h3>三、 資料安全</h3>
+            <p>本機儲存若損壞、遺失或解安裝且未備份，資料將無法找回。雲端備份依賴 Google Drive 穩定性，開發者不負賠償責任。</p>
+        </section>
+
+        <section id="faq">
+            <h2>常見問題 (FAQ)</h2>
+
+            <div class="faq-item">
+                <span class="faq-q">Q1：我的記帳資料儲存在哪裡？</span>
+                <p>僅儲存在您的手機內部資料庫中。開發者無法看見、也無法持有您的任何財務明細。</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-q">Q2：換手機時資料可以搬移嗎？</span>
+                <p>可以。啟用「Google Drive 雲端備份」功能後，在新手機登入同帳號並點選「還原資料」即可。</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-q">Q3：為什麼需要 Google 帳號登入？</span>
+                <p>僅是為了授權將加密備份檔存放於您的 Google Drive 空間，我們不要求您註冊帳號。</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-q">Q4：AI 記帳的準確性如何？</span>
+                <p>AI 可能受背景雜音影響。強烈建議在儲存前核對 AI 產出的金額，您的修正會讓它更精準。</p>
+            </div>
+        </section>
+
+        <section id="deletion">
+            <h2>資料刪除申請 (Data Deletion)</h2>
+            <p>本應用程式採用<strong>無帳號制</strong>設計。我們不儲存您的個人檔案，您可透過以下方式完全刪除數據：</p>
+
+            <div class="danger-box">
+                <strong>步驟一：本機資料</strong><br>
+                進入 App > 「設定」 > 點選「清除所有資料」。或直接解除安裝 App。
+            </div>
+
+            <div class="danger-box">
+                <strong>步驟二：雲端備份</strong><br>
+                至您的 Google Drive 刪除名為 <code>Moni 語音記帳_Backup</code> 的資料夾。
+            </div>
+
+            <div class="danger-box">
+                <strong>步驟三：撤銷權限</strong><br>
+                前往「Google 安全性設定」移除 Moni 語音記帳的存取權。
+            </div>
+        </section>
+
+        <section id="contact" style="text-align: center;">
+            <h2>聯絡我們 (Contact Us)</h2>
+            <p>如有疑問、建議或技術回報，歡迎聯繫我們。</p>
+            <p><strong>客服信箱：</strong><br>daikoku.flow.tw@gmail.com</p>
+            <p>回覆時程：約 120 小時內（不含例假日）。</p>
+            <a href="mailto:daikoku.flow.tw@gmail.com" class="contact-btn">發送郵件</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Moni 語音記帳. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
